@@ -84,6 +84,7 @@ module.exports = {
                     },
                 ]
             },
+			{text: 'JVM', link: '/pages/999820/'},
             {text: '部署', link: '/pages/9cc27d/'},
             {text: '关于', link: '/pages/1b12ed/'},
         ],
