@@ -78,6 +78,12 @@ public class A{
 
 * 准备阶段
 
-TODO
+这一阶段也是比较好理解的，写好的类中，会有一些类变量
 
------
+```java
+public class StaticDemo{
+    public static int number = 100;
+}
+```
+
+从上述案例中，可以看到`StaticDemo.class`被加载到内存中，会进行验证，确认这个字节码文件的内容是符合规范的。而**准备工作**，就是给这个类分配内存空间，并且也要给它的类变量(static 修饰的变量)分配内存空间，来一个默认的初始值（如0、0L、null、false 等）。上面定义的 `number` 会在准备阶段赋值为 `0`。**如果`number`被`final`关键字修饰的话，准备阶段就会赋值为 `100`**
