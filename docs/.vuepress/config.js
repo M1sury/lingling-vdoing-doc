@@ -87,6 +87,7 @@ module.exports = {
 			{text: 'JVM', link: '/pages/999820/', items: [
                     {text: 'JVM基础', link: '/pages/999820/'},
 					{text: 'JVM参数总结', link: '/pages/4dac66/'},
+					{text: 'ClassFile解析', link: '/pages/77ee85/'},
                 ]},
             {text: '部署', link: '/pages/9cc27d/'},
             {text: '关于', link: '/pages/1b12ed/'},
