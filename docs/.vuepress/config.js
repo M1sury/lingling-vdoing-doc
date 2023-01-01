@@ -84,12 +84,26 @@ module.exports = {
                     },
                 ]
             },
-			{text: 'JVM', link: '/pages/999820/', items: [
+            {
+                text: 'JVM', link: '/pages/999820/', items: [
                     {text: 'JVM基础', link: '/pages/999820/'},
-					{text: 'JVM参数总结', link: '/pages/4dac66/'},
-					{text: 'ClassFile解析', link: '/pages/77ee85/'},
-                ]},
-            {text: '部署', link: '/pages/9cc27d/'},
+                    {text: 'JVM参数总结', link: '/pages/4dac66/'},
+                    {text: 'ClassFile解析', link: '/pages/77ee85/'},
+                ]
+            },
+            {
+                text: '部署', link: '/pages/9cc27d/', items: [
+                    {
+                        text: '青龙面板', link: '/pages/95365c/', items: [
+                            {text: '青龙-介绍', link: '/pages/95365c/'},
+                            {text: '青龙面板部署', link: '/pages/470ed8/'},
+                            {text: '青龙-京东', link: '/pages/e85f2c/'},
+                            {text: '青龙-B站', link: '/pages/daaeaa/'},
+                        ]
+                    },
+
+                ]
+            },
             {text: '关于', link: '/pages/1b12ed/'},
         ],
         sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
