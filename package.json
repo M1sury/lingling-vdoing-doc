@@ -24,6 +24,7 @@
     "yamljs": "^0.3.0"
   },
   "dependencies": {
-    "vssue": "^1.4.8"
+    "vssue": "^1.4.8",
+    "vuepress-plugin-vssue-global": "^0.0.3"
   }
 }

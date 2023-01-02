@@ -130,7 +130,7 @@ module.exports = {
         //   '图标地址2'
         // ],
 
-        pageStyle: 'line', // 页面风格，可选值：'card'卡片 | 'line' 线（未设置bodyBgImg时才生效）， 默认'card'。 说明：card时背景显示灰色衬托出卡片样式，line时背景显示纯色，并且部分模块带线条边框
+        pageStyle: 'card', // 页面风格，可选值：'card'卡片 | 'line' 线（未设置bodyBgImg时才生效）， 默认'card'。 说明：card时背景显示灰色衬托出卡片样式，line时背景显示纯色，并且部分模块带线条边框
 
         // contentBgStyle: 1,
 
@@ -164,7 +164,7 @@ module.exports = {
         },
         footer: { // 页脚信息
             createYear: 2022, // 博客创建年份
-            copyrightInfo: 'Evan Xu | MIT License', // 博客版权信息，支持a标签
+            copyrightInfo: 'Lingling | MIT License', // 博客版权信息，支持a标签
         },
         htmlModules,
     },
@@ -177,34 +177,36 @@ module.exports = {
         // }],
 
         ['fulltext-search'], // 全文搜索
-
-        // ['thirdparty-search', { // 可以添加第三方搜索链接的搜索框（原官方搜索框的参数仍可用）
-        //   thirdparty: [ // 可选，默认 []
-        //     {
-        //       title: '在GitHub中搜索',
-        //       frontUrl: 'https://github.com/search?q=', // 搜索链接的前面部分
-        //       behindUrl: '' // 搜索链接的后面部分，可选，默认 ''
-        //     },
-        //     {
-        //       title: '在npm中搜索',
-        //       frontUrl: 'https://www.npmjs.com/search?q=',
-        //     },
-        //     {
-        //       title: '在Bing中搜索',
-        //       frontUrl: 'https://cn.bing.com/search?q='
-        //     }
-        //   ]
-        // }],
-        // [
-        // 'vssue',//评论栏
-        // ]
+        ['vuepress-plugin-vssue-global', {
+            // 设置 `platform` 而不是 `api`
+            platform: 'github',
+            title: "[Comment]<%- frontmatter.title %>",
+            // 其他的 Vssue 配置
+            autoCreateIssue: true,
+            // 其他的 Vssue 配置
+            owner: 'M1sury',
+            repo: 'lingling-vdoing-doc',
+            clientId: '450b52e2773bae64d489',
+            clientSecret: 'ea79a4a38bad1ca9d9afed11658f0b32c5599dc0',
+        }
+        ],
+        // 增强 markdown
+        [
+            "md-enhance", {
+            // 启用 TeX 支持
+            tex: true,
+            // Enable mermaid
+            mermaid: true,
+            // 启用流程图
+            flowchart: true,
+        },
+        ],
         [
             'vuepress-plugin-baidu-tongji', // 百度统计
             {
                 hm: baiduCode || '01293bffa6c3962016c08ba685c79d78'
             }
         ],
-
         ['one-click-copy', { // 代码块复制按钮
             copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
             copyMessage: '复制成功', // default is 'Copy successfully and then paste it for use.'
