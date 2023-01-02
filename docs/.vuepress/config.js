@@ -30,6 +30,8 @@ module.exports = {
                             {text: '3.用私有构造器或者枚举类型强化 Singleton 属性', link: '/pages/4f7ed6/'},
                             {text: '4.通过私有构造器强化不可实例化的能力', link: '/pages/2421a4/'},
                             {text: '5.优先考虑依赖注入来引用资源', link: '/pages/db5d15/'},
+							{text: '6.避免创建不必要的对象', link: '/pages/f397ab/'},
+							{text: '7.消除过期的对象引用', link: '/pages/8cd9f7/'},
                         ]
                     },
                     // { text: '第二章：对于所有对象都通用的方法', items:[
