@@ -30,8 +30,8 @@ module.exports = {
                             {text: '3.用私有构造器或者枚举类型强化 Singleton 属性', link: '/pages/4f7ed6/'},
                             {text: '4.通过私有构造器强化不可实例化的能力', link: '/pages/2421a4/'},
                             {text: '5.优先考虑依赖注入来引用资源', link: '/pages/db5d15/'},
-							{text: '6.避免创建不必要的对象', link: '/pages/f397ab/'},
-							{text: '7.消除过期的对象引用', link: '/pages/8cd9f7/'},
+                            {text: '6.避免创建不必要的对象', link: '/pages/f397ab/'},
+                            {text: '7.消除过期的对象引用', link: '/pages/8cd9f7/'},
                         ]
                     },
                     // { text: '第二章：对于所有对象都通用的方法', items:[
@@ -88,9 +88,18 @@ module.exports = {
             },
             {
                 text: 'JVM', link: '/pages/999820/', items: [
-                    {text: 'JVM基础', link: '/pages/999820/'},
-                    {text: 'JVM参数总结', link: '/pages/4dac66/'},
-                    {text: 'ClassFile解析', link: '/pages/77ee85/'},
+                    {
+                        text: '调优实践', items: [
+                            {text: '记一次SpringBoot启动优化实践', link: '/pages/0a92a2/'},
+                        ]
+                    },
+                    {
+                        text: 'JVM知识总结', items: [
+                            {text: 'JVM基础', link: '/pages/999820/'},
+                            {text: 'JVM参数总结', link: '/pages/4dac66/'},
+                            {text: 'ClassFile解析', link: '/pages/77ee85/'},
+                        ]
+                    },
                 ]
             },
             {
@@ -180,16 +189,16 @@ module.exports = {
 
         ['fulltext-search'], // 全文搜索
         // ['vuepress-plugin-vssue-global', {
-            //设置 `platform` 而不是 `api`
-            // platform: 'github',
-            // title: "[Comment]<%- frontmatter.title %>",
-            //其他的 Vssue 配置
-            // autoCreateIssue: true,
-            //其他的 Vssue 配置
-            // owner: 'M1sury',
-            // repo: 'lingling-vdoing-doc',
-            // clientId: '450b52e2773bae64d489',
-            // clientSecret: 'ea79a4a38bad1ca9d9afed11658f0b32c5599dc0',
+        //设置 `platform` 而不是 `api`
+        // platform: 'github',
+        // title: "[Comment]<%- frontmatter.title %>",
+        //其他的 Vssue 配置
+        // autoCreateIssue: true,
+        //其他的 Vssue 配置
+        // owner: 'M1sury',
+        // repo: 'lingling-vdoing-doc',
+        // clientId: '450b52e2773bae64d489',
+        // clientSecret: 'ea79a4a38bad1ca9d9afed11658f0b32c5599dc0',
         // }
         // ],
         // 增强 markdown
