@@ -179,19 +179,19 @@ module.exports = {
         // }],
 
         ['fulltext-search'], // 全文搜索
-        ['vuepress-plugin-vssue-global', {
-            // 设置 `platform` 而不是 `api`
-            platform: 'github',
-            title: "[Comment]<%- frontmatter.title %>",
-            // 其他的 Vssue 配置
-            autoCreateIssue: true,
-            // 其他的 Vssue 配置
-            owner: 'M1sury',
-            repo: 'lingling-vdoing-doc',
-            clientId: '450b52e2773bae64d489',
-            clientSecret: 'ea79a4a38bad1ca9d9afed11658f0b32c5599dc0',
-        }
-        ],
+        // ['vuepress-plugin-vssue-global', {
+            //设置 `platform` 而不是 `api`
+            // platform: 'github',
+            // title: "[Comment]<%- frontmatter.title %>",
+            //其他的 Vssue 配置
+            // autoCreateIssue: true,
+            //其他的 Vssue 配置
+            // owner: 'M1sury',
+            // repo: 'lingling-vdoing-doc',
+            // clientId: '450b52e2773bae64d489',
+            // clientSecret: 'ea79a4a38bad1ca9d9afed11658f0b32c5599dc0',
+        // }
+        // ],
         // 增强 markdown
         [
             "md-enhance", {
