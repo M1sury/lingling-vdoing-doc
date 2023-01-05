@@ -8,7 +8,7 @@ yarn-error.log
 
 #yarn
 yarn.lock
-
+.idea
 # vuepress
 docs/.vuepress/dist
 
