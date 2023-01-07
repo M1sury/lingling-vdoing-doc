@@ -1,18 +1,18 @@
 const baiduCode = require('./config/baiduCode.js'); // 百度统计hm码
 const htmlModules = require('./config/htmlModules.js');
-const CompressionPlugin = require("compression-webpack-plugin");
+//const CompressionPlugin = require("compression-webpack-plugin");
 
 
 module.exports = {
-configureWebpack: config =>{
-        return {
-        plugins:[new Compression({
-        test: /\.js$|\.html$|\.css/, //匹配文件名
-                  threshold: 10240, //大于10KB的文件进行压缩
-                  deleteOriginalAssets: false //是否删除原文件
-                })]
-              }
-  },
+//configureWebpack: config =>{
+        //return {
+        //plugins:[new Compression({
+        //test: /\.js$|\.html$|\.css/, //匹配文件名
+        //          threshold: 10240, //大于10KB的文件进行压缩
+        //          deleteOriginalAssets: false //是否删除原文件
+        //        })]
+        //      }
+  //},
     theme: 'vdoing', // 使用依赖包主题
     // theme: require.resolve('../../vdoing'), // 使用本地主题 (先将vdoing主题文件下载到本地：https://github.com/xugaoyi/vuepress-theme-vdoing)
 
@@ -109,6 +109,11 @@ configureWebpack: config =>{
                             {text: 'ClassFile解析', link: '/pages/77ee85/'},
                         ]
                     },
+                ]
+            },
+			{
+                text: '工具', link: '/pages/a7a7e0/', items: [
+                    {text: 'Scoop的安装与实用', link: '/pages/a7a7e0/'},
                 ]
             },
             {
