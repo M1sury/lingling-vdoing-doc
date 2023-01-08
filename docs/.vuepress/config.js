@@ -109,6 +109,11 @@ module.exports = {
                             {text: 'ClassFile解析', link: '/pages/77ee85/'},
                         ]
                     },
+                    {
+                        text: '技术前瞻', items: [
+                            {text: 'Graal-Vm', link: '/pages/351315/'},
+                        ]
+                    },
                 ]
             },
 			{
