@@ -16,10 +16,13 @@ module.exports = {
         //      }
   //},
     theme: 'vdoing', // 使用依赖包主题
-    // theme: require.resolve('../../vdoing'), // 使用本地主题 (先将vdoing主题文件下载到本地：https://github.com/xugaoyi/vuepress-theme-vdoing)
-
-    title: "unknownName-lingling",
-    description: '仅仅只是一个记录个人学习的博客',
+    locales:{
+        "/":{
+        lang: 'zh-CN',
+              title: "lingling's blog",
+              description: '仅仅只是一个记录个人学习的博客',
+        }
+    },
     // base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
     head: [ // 注入到页面<head> 中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
         ['link', {rel: 'icon', href: '/img/favicon.ico'}], //favicons，资源放在public文件夹
@@ -168,8 +171,15 @@ module.exports = {
         },
         footer: { // 页脚信息
             createYear: 2022, // 博客创建年份
-            copyrightInfo: 'Lingling | MIT License', // 博客版权信息，支持a标签
+            copyrightInfo: 'Lingling | <a href="https://github.com/M1sury/lingling-vdoing-doc/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息，支持a标签
         },
+        // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
+            extendFrontmatter: {
+              author: {
+                name: 'lingling',
+                link: 'https://github.com/M1sury'
+              }
+            },
         htmlModules,
     },
 
