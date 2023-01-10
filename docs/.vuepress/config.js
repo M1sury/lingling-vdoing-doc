@@ -185,15 +185,6 @@ module.exports = {
     // 注入到页面<head>中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
     head:[
     ['meta', { name: 'baidu-site-verification', content: 'code-NFO0JdhDIn' }], // 百度统计的站长验证（你可以去掉）
-    ['script',
-    {},
-    `var _hmt = _hmt || [];
-              (function() {
-                var hm = document.createElement("script");
-                hm.src = "https://hm.baidu.com/hm.js?30f324f9ae581aecfa25b75a6a33ab4d";
-                var s = document.getElementsByTagName("script")[0];
-                s.parentNode.insertBefore(hm, s);
-              })();`]
     ],
     // 插件
     plugins: [
@@ -268,6 +259,12 @@ module.exports = {
             flowchart: true,
         },
         ],
+        [
+                    'vuepress-plugin-baidu-tongji', // 百度统计
+                    {
+                        hm: baiduCode || '30f324f9ae581aecfa25b75a6a33ab4d'
+                    }
+                ],
         ['one-click-copy', { // 代码块复制按钮
             copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
             copyMessage: '复制成功', // default is 'Copy successfully and then paste it for use.'
