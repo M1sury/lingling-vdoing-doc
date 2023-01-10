@@ -194,6 +194,11 @@ module.exports = {
         // }],
 
         //['fulltext-search'], // 全文搜索
+        [
+        'sitemap',{
+              hostname: 'https://www.misury.top'
+            },
+        ],
         // 可以添加第三方搜索链接的搜索框（继承原官方搜索框的配置参数）
         [
           'thirdparty-search',
