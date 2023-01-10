@@ -1,7 +1,9 @@
 const baiduCode = require('./config/baiduCode.js'); // 百度统计hm码
 const htmlModules = require('./config/htmlModules.js');
+const dayjs = require('dayjs') // https://day.js.org/
 //const CompressionPlugin = require("compression-webpack-plugin");
-
+const DOMAIN_NAME = 'misury.top' // 域名 (不带https)
+const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
 
 module.exports = {
 //configureWebpack: config =>{
@@ -52,34 +54,6 @@ module.exports = {
                     // { text: '2.当面临多个参数的构造器时考虑使用Builder模式', link: '/pages/296245/' },
                     // ]},
                     // { text: '第四章：泛型', items:[
-                    // { text: '1.考虑静态工厂而不是构造函数', link: '/pages/60f602/' },
-                    // { text: '2.当面临多个参数的构造器时考虑使用Builder模式', link: '/pages/296245/' },
-                    // ]},
-                    // { text: '第五章：枚举和注解', items:[
-                    // { text: '1.考虑静态工厂而不是构造函数', link: '/pages/60f602/' },
-                    // { text: '2.当面临多个参数的构造器时考虑使用Builder模式', link: '/pages/296245/' },
-                    // ]},
-                    // { text: '第六章：Lambda和Stream', items:[
-                    // { text: '1.考虑静态工厂而不是构造函数', link: '/pages/60f602/' },
-                    // { text: '2.当面临多个参数的构造器时考虑使用Builder模式', link: '/pages/296245/' },
-                    // ]},
-                    // { text: '第七章：方法', items:[
-                    // { text: '1.考虑静态工厂而不是构造函数', link: '/pages/60f602/' },
-                    // { text: '2.当面临多个参数的构造器时考虑使用Builder模式', link: '/pages/296245/' },
-                    // ]},
-                    // { text: '第八章：通用编程', items:[
-                    // { text: '1.考虑静态工厂而不是构造函数', link: '/pages/60f602/' },
-                    // { text: '2.当面临多个参数的构造器时考虑使用Builder模式', link: '/pages/296245/' },
-                    // ]},
-                    // { text: '第九章：异常', items:[
-                    // { text: '1.考虑静态工厂而不是构造函数', link: '/pages/60f602/' },
-                    // { text: '2.当面临多个参数的构造器时考虑使用Builder模式', link: '/pages/296245/' },
-                    // ]},
-                    // { text: '第十章：并发', items:[
-                    // { text: '1.考虑静态工厂而不是构造函数', link: '/pages/60f602/' },
-                    // { text: '2.当面临多个参数的构造器时考虑使用Builder模式', link: '/pages/296245/' },
-                    // ]},
-                    // { text: '第十一章：序列化', items:[
                     // { text: '1.考虑静态工厂而不是构造函数', link: '/pages/60f602/' },
                     // { text: '2.当面临多个参数的构造器时考虑使用Builder模式', link: '/pages/296245/' },
                     // ]},
@@ -206,20 +180,56 @@ module.exports = {
         //   excludeClassName: 'theme-vdoing-content' // 要排除元素的class, 默认空''
         // }],
 
-        ['fulltext-search'], // 全文搜索
-        // ['vuepress-plugin-vssue-global', {
-        //设置 `platform` 而不是 `api`
-        // platform: 'github',
-        // title: "[Comment]<%- frontmatter.title %>",
-        //其他的 Vssue 配置
-        // autoCreateIssue: true,
-        //其他的 Vssue 配置
-        // owner: 'M1sury',
-        // repo: 'lingling-vdoing-doc',
-        // clientId: '450b52e2773bae64d489',
-        // clientSecret: 'ea79a4a38bad1ca9d9afed11658f0b32c5599dc0',
-        // }
-        // ],
+        //['fulltext-search'], // 全文搜索
+        // 可以添加第三方搜索链接的搜索框（继承原官方搜索框的配置参数）
+        [
+          'thirdparty-search',
+          {
+            thirdparty: [
+              {
+                title: '在MDN中搜索',
+                frontUrl: 'https://developer.mozilla.org/zh-CN/search?q=', // 搜索链接的前面部分
+                behindUrl: '', // 搜索链接的后面部分，可选，默认 ''
+              },
+              {
+                title: '在Runoob中搜索',
+                frontUrl: 'https://www.runoob.com/?s=',
+              },
+              {
+                title: '在Vue API中搜索',
+                frontUrl: 'https://cn.vuejs.org/v2/api/#',
+              },
+              {
+                title: '在Bing中搜索',
+                frontUrl: 'https://cn.bing.com/search?q=',
+              },
+              {
+                title: '通过百度搜索本站的',
+                frontUrl: `https://www.baidu.com/s?wd=site%3A${DOMAIN_NAME}%20`,
+              },
+            ],
+          }
+        ],
+        [
+          'vuepress-plugin-comment', // 评论
+          {
+            choosen: 'gitalk',
+            options: {
+              clientID: '450b52e2773bae64d489',
+              clientSecret: 'ea79a4a38bad1ca9d9afed11658f0b32c5599dc0',
+              repo: 'lingling-vdoing-doc', // GitHub 仓库
+              owner: 'M1sury', // GitHub仓库所有者
+              admin: ['M1sury'], // 对仓库有写权限的人
+              // distractionFreeMode: true,
+              pagerDirection: 'last', // 'first'正序 | 'last'倒序
+              id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
+              title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
+              labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
+              body:
+                '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
+            },
+          },
+        ],
         // 增强 markdown
         [
             "md-enhance", {
@@ -266,7 +276,6 @@ module.exports = {
             '@vuepress/last-updated', // "上次更新"时间格式
             {
                 transformer: (timestamp, lang) => {
-                    const dayjs = require('dayjs') // https://day.js.org/
                     return dayjs(timestamp).format('YYYY/MM/DD, HH:mm:ss')
                 },
             }
@@ -274,7 +283,7 @@ module.exports = {
     ],
 
     markdown: {
-        // lineNumbers: true,
+        lineNumbers: true,
         extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6'], // 提取标题到侧边栏的级别，默认['h2', 'h3']
     },
 
