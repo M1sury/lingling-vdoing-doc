@@ -185,6 +185,7 @@ module.exports = {
 
     // 插件
     plugins: [
+    ['meta', { name: 'baidu-site-verification', content: 'NFO0JdhDIn' }], // 百度统计的站长验证（你可以去掉）
         // [require('./plugins/love-me'), { // 鼠标点击爱心特效
         //   color: '#11a8cd', // 爱心颜色，默认随机色
         //   excludeClassName: 'theme-vdoing-content' // 要排除元素的class, 默认空''
