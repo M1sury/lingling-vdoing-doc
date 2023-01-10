@@ -184,7 +184,7 @@ module.exports = {
     },
     // 注入到页面<head>中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
     head:[
-    ['meta', { name: 'baidu-site-verification', content: 'NFO0JdhDIn' }], // 百度统计的站长验证（你可以去掉）
+    ['meta', { name: 'baidu-site-verification', content: 'code-NFO0JdhDIn' }], // 百度统计的站长验证（你可以去掉）
     ],
     // 插件
     plugins: [
