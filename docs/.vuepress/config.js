@@ -46,6 +46,7 @@ module.exports = {
                             {text: '5.优先考虑依赖注入来引用资源', link: '/pages/db5d15/'},
                             {text: '6.避免创建不必要的对象', link: '/pages/f397ab/'},
                             {text: '7.消除过期的对象引用', link: '/pages/8cd9f7/'},
+							{text: '8.避免使用终结方法和清除方法', link: '/pages/012eaa/'},
                         ]
                     },
                     // { text: '第二章：对于所有对象都通用的方法', items:[
