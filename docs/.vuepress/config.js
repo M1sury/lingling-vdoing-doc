@@ -1,26 +1,15 @@
 const baiduCode = require('./config/baiduCode.js'); // 百度统计hm码
 const htmlModules = require('./config/htmlModules.js');
 const dayjs = require('dayjs') // https://day.js.org/
-//const CompressionPlugin = require("compression-webpack-plugin");
 const DOMAIN_NAME = 'misury.top' // 域名 (不带https)
 const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
 
 module.exports = {
-//configureWebpack: config =>{
-        //return {
-        //plugins:[new Compression({
-        //test: /\.js$|\.html$|\.css/, //匹配文件名
-        //          threshold: 10240, //大于10KB的文件进行压缩
-        //          deleteOriginalAssets: false //是否删除原文件
-        //        })]
-        //      }
-  //},
-    theme: 'vdoing', // 使用依赖包主题
-    locales:{
-        "/":{
-        lang: 'zh-CN',
-              title: "lingling's blog",
-              description: '仅仅只是一个记录个人学习的博客',
+    locales: {
+        "/": {
+            lang: 'zh-CN',
+            title: "lingling's blog",
+            description: '仅仅只是一个记录个人学习的博客',
         }
     },
     // base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
@@ -46,7 +35,7 @@ module.exports = {
                             {text: '5.优先考虑依赖注入来引用资源', link: '/pages/db5d15/'},
                             {text: '6.避免创建不必要的对象', link: '/pages/f397ab/'},
                             {text: '7.消除过期的对象引用', link: '/pages/8cd9f7/'},
-							{text: '8.避免使用终结方法和清除方法', link: '/pages/012eaa/'},
+                            {text: '8.避免使用终结方法和清除方法', link: '/pages/012eaa/'},
                         ]
                     },
                     // { text: '第二章：对于所有对象都通用的方法', items:[
@@ -94,9 +83,18 @@ module.exports = {
                     },
                 ]
             },
-			{
+            {
                 text: '工具', link: '/pages/a7a7e0/', items: [
                     {text: 'Scoop的安装与实用', link: '/pages/a7a7e0/'},
+                ]
+            },
+            {
+                text: 'Go', link: '/pages/572a48/', items: [
+                    {
+                        text: '入门记录', link: '/pages/572a48/', items: [
+                            {text: '记录入门Go的坑', link: '/pages/572a48/'}
+                        ]
+                    },
                 ]
             },
             {
@@ -175,17 +173,17 @@ module.exports = {
             copyrightInfo: 'Lingling | <a href="https://github.com/M1sury/lingling-vdoing-doc/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息，支持a标签
         },
         // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
-            extendFrontmatter: {
-              author: {
+        extendFrontmatter: {
+            author: {
                 name: 'lingling',
                 link: 'https://github.com/M1sury'
-              }
-            },
+            }
+        },
         htmlModules,
     },
     // 注入到页面<head>中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
-    head:[
-    ['meta', { name: 'baidu-site-verification', content: 'code-NFO0JdhDIn' }], // 百度统计的站长验证（你可以去掉）
+    head: [
+        ['meta', {name: 'baidu-site-verification', content: 'code-NFO0JdhDIn'}], // 百度统计的站长验证（你可以去掉）
     ],
     // 插件
     plugins: [
@@ -196,59 +194,59 @@ module.exports = {
 
         //['fulltext-search'], // 全文搜索
         [
-        'sitemap',{
-              hostname: 'https://www.misury.top'
-            },
+            'sitemap', {
+            hostname: 'https://www.misury.top'
+        },
         ],
         // 可以添加第三方搜索链接的搜索框（继承原官方搜索框的配置参数）
         [
-          'thirdparty-search',
-          {
-            thirdparty: [
-              {
-                title: '在MDN中搜索',
-                frontUrl: 'https://developer.mozilla.org/zh-CN/search?q=', // 搜索链接的前面部分
-                behindUrl: '', // 搜索链接的后面部分，可选，默认 ''
-              },
-              {
-                title: '在Runoob中搜索',
-                frontUrl: 'https://www.runoob.com/?s=',
-              },
-              {
-                title: '在Vue API中搜索',
-                frontUrl: 'https://cn.vuejs.org/v2/api/#',
-              },
-              {
-                title: '在Bing中搜索',
-                frontUrl: 'https://cn.bing.com/search?q=',
-              },
-              {
-                title: '通过百度搜索本站的',
-                frontUrl: `https://www.baidu.com/s?wd=site%3A${DOMAIN_NAME}%20`,
-              },
-            ],
-          }
+            'thirdparty-search',
+            {
+                thirdparty: [
+                    {
+                        title: '在MDN中搜索',
+                        frontUrl: 'https://developer.mozilla.org/zh-CN/search?q=', // 搜索链接的前面部分
+                        behindUrl: '', // 搜索链接的后面部分，可选，默认 ''
+                    },
+                    {
+                        title: '在Runoob中搜索',
+                        frontUrl: 'https://www.runoob.com/?s=',
+                    },
+                    {
+                        title: '在Vue API中搜索',
+                        frontUrl: 'https://cn.vuejs.org/v2/api/#',
+                    },
+                    {
+                        title: '在Bing中搜索',
+                        frontUrl: 'https://cn.bing.com/search?q=',
+                    },
+                    {
+                        title: '通过百度搜索本站的',
+                        frontUrl: `https://www.baidu.com/s?wd=site%3A${DOMAIN_NAME}%20`,
+                    },
+                ],
+            }
         ],
         [
-          'vuepress-plugin-comment', // 评论
-          {
-            choosen: 'gitalk',
-            options: {
-              clientID: '450b52e2773bae64d489',
-              clientSecret: 'ea79a4a38bad1ca9d9afed11658f0b32c5599dc0',
-              repo: 'lingling-vdoing-doc', // GitHub 仓库
-              owner: 'M1sury', // GitHub仓库所有者
-              admin: ['M1sury'], // 对仓库有写权限的人
-              proxy: '/github/login/oauth/access_token',//反向代理解决跨域问题
-              // distractionFreeMode: true,
-              pagerDirection: 'last', // 'first'正序 | 'last'倒序
-              id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
-              title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
-              labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
-              body:
-                '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
+            'vuepress-plugin-comment', // 评论
+            {
+                choosen: 'gitalk',
+                options: {
+                    clientID: '450b52e2773bae64d489',
+                    clientSecret: 'ea79a4a38bad1ca9d9afed11658f0b32c5599dc0',
+                    repo: 'lingling-vdoing-doc', // GitHub 仓库
+                    owner: 'M1sury', // GitHub仓库所有者
+                    admin: ['M1sury'], // 对仓库有写权限的人
+                    proxy: '/github/login/oauth/access_token',//反向代理解决跨域问题
+                    // distractionFreeMode: true,
+                    pagerDirection: 'last', // 'first'正序 | 'last'倒序
+                    id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
+                    title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
+                    labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
+                    body:
+                        '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
+                },
             },
-          },
         ],
         // 增强 markdown
         [
@@ -262,11 +260,11 @@ module.exports = {
         },
         ],
         [
-                    'vuepress-plugin-baidu-tongji', // 百度统计
-                    {
-                        hm: baiduCode || '30f324f9ae581aecfa25b75a6a33ab4d'
-                    }
-                ],
+            'vuepress-plugin-baidu-tongji', // 百度统计
+            {
+                hm: baiduCode || '30f324f9ae581aecfa25b75a6a33ab4d'
+            }
+        ],
         ['one-click-copy', { // 代码块复制按钮
             copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
             copyMessage: '复制成功', // default is 'Copy successfully and then paste it for use.'
