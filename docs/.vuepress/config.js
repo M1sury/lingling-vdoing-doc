@@ -90,6 +90,11 @@ module.exports = {
                 ]
             },
             {
+                 text: '微服务组件', items: [
+                                {text: 'Sentinel', link: '/pages/91c228/'},
+                            ]
+                        },
+            {
                 text: 'Go', link: '/pages/572a48/', items: [
                     {
                         text: '入门记录', link: '/pages/572a48/', items: [
