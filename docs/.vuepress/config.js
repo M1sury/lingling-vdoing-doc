@@ -99,7 +99,7 @@ module.exports = {
                 ]
             },
             {
-                text: '部署', link: '/pages/9cc27d/', items: [
+                text: '部署', items: [
                     {
                         text: '青龙面板', link: '/pages/95365c/', items: [
                             {text: '青龙-介绍', link: '/pages/95365c/'},
@@ -108,7 +108,10 @@ module.exports = {
                             {text: '青龙-B站', link: '/pages/daaeaa/'},
                         ]
                     },
-
+                    {text:"中间件",items:[
+                        {text: 'Nginx', link: '/pages/602c04/'},
+                        {text: 'Gitlab', link: '/pages/ccb60c/'},
+                    ]},
                 ]
             },
             {text: '关于', link: '/pages/1b12ed/'},
