@@ -5,6 +5,7 @@ const DOMAIN_NAME = 'misury.top' // 域名 (不带https)
 const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
 
 module.exports = {
+    theme: 'vdoing', // 使用依赖包主题
     locales: {
         "/": {
             lang: 'zh-CN',
