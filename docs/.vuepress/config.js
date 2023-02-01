@@ -15,7 +15,7 @@ module.exports = {
     },
     // base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
     head: [ // 注入到页面<head> 中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
-        ['link', {rel: 'icon', href: 'favicon.ico'}], //favicons，资源放在public文件夹
+        ['link', {rel: 'icon', href: 'http://cdn.misury.top/favicon.ico'}], //favicons，资源放在public文件夹
         ['meta', {name: 'keywords', content: 'vuepress,theme,blog,vdoing'}],
         ['meta', {name: 'theme-color', content: '#11a8cd'}], // 移动浏览器主题颜色
     ],
@@ -37,6 +37,7 @@ module.exports = {
                             {text: '6.避免创建不必要的对象', link: '/pages/f397ab/'},
                             {text: '7.消除过期的对象引用', link: '/pages/8cd9f7/'},
                             {text: '8.避免使用终结方法和清除方法', link: '/pages/012eaa/'},
+                            {text: '9.try-with-resources优先于try-finally', link: '/pages/862b3d/'},
                         ]
                     },
                     // { text: '第二章：对于所有对象都通用的方法', items:[
@@ -206,6 +207,9 @@ module.exports = {
             'sitemap', {
             hostname: 'https://www.misury.top'
         },
+        ],
+        [
+            '@oak-tree-house/encrypt'
         ],
         // 可以添加第三方搜索链接的搜索框（继承原官方搜索框的配置参数）
         [
