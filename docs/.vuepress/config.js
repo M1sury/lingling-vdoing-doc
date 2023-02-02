@@ -87,7 +87,8 @@ module.exports = {
             },
             {
                 text: '工具', link: '/pages/a7a7e0/', items: [
-                    {text: 'Scoop的安装与实用', link: '/pages/a7a7e0/'},
+                    {text: 'Scoop的安装与使用', link: '/pages/a7a7e0/'},
+                    {text: '服务器开发环境安装', link: '/pages/877e26/'},
                 ]
             },
             {
