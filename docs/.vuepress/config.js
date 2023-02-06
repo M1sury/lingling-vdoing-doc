@@ -115,7 +115,7 @@ module.exports = {
                             {text: '青龙-B站', link: '/pages/daaeaa/'},
                         ]
                     },
-                    {text:"Gitub/Gitee+云效实现自动化部署",link:'/pages/8526a9/'}
+                    {text:"Gitub/Gitee+云效实现自动化部署",link:'/pages/8526a9/'},
                     {text:"中间件",items:[
                         {text: 'Nginx', link: '/pages/602c04/'},
                         {text: 'Gitlab', link: '/pages/ccb60c/'},
