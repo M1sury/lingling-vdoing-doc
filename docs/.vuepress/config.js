@@ -15,7 +15,7 @@ module.exports = {
     },
     // base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
     head: [ // 注入到页面<head> 中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
-        ['link', {rel: 'icon', href: 'http://cdn.misury.top/favicon.ico'}], //favicons，资源放在public文件夹
+        ['link', {rel: 'icon', href: 'https://cdn.staticaly.com/gh/M1sury/image-store@master/favicon.ico'}], //favicons，资源放在public文件夹
         ['meta', {name: 'keywords', content: 'vuepress,theme,blog,vdoing'}],
         ['meta', {name: 'theme-color', content: '#11a8cd'}], // 移动浏览器主题颜色
     ],
