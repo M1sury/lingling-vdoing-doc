@@ -119,7 +119,7 @@ module.exports = {
                             {text: 'Gitub或Gitee+云效实现自动化部署(上)', link: '/pages/8526a9/'},
                             {text: 'Gitub或Gitee+云效实现自动化部署(下)', link: '/pages/be6bbe/'},
                     ]},
-                    {text:"中间件",items:[
+                    {text:"Linux常用组件",items:[
                         {text: 'Nginx', link: '/pages/602c04/'},
                         {text: 'Gitlab', link: '/pages/ccb60c/'},
                     ]},
