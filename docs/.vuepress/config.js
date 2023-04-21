@@ -210,6 +210,15 @@ module.exports = {
 
         //['fulltext-search'], // 全文搜索
         [
+            'container',{
+            type: 'tip',
+            defaultTitle:{
+                '/':'TIP',
+                '/zh/':'提示'
+            }
+            }
+        ],
+        [
             'sitemap', {
             hostname: 'https://www.misury.top'
         },
