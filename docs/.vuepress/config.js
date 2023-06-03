@@ -40,10 +40,12 @@ module.exports = {
                             {text: '9.try-with-resources优先于try-finally', link: '/pages/862b3d/'},
                         ]
                     },
-                    // { text: '第二章：对于所有对象都通用的方法', items:[
-                    // { text: '1.考虑静态工厂而不是构造函数', link: '/pages/60f602/' },
-                    // { text: '2.当面临多个参数的构造器时考虑使用Builder模式', link: '/pages/296245/' },
-                    // ]},
+                    {
+                        text: '第二章：对于所有对象都通用的方法', items: [
+                            {text: '10.覆盖equals时请遵守通用约定', link: '/pages/8d58b1/'},
+                            // {text: '2.当面临多个参数的构造器时考虑使用Builder模式', link: '/pages/296245/'},
+                        ]
+                    },
                     // { text: '第三章：类和接口', items:[
                     // { text: '1.考虑静态工厂而不是构造函数', link: '/pages/60f602/' },
                     // { text: '2.当面临多个参数的构造器时考虑使用Builder模式', link: '/pages/296245/' },
