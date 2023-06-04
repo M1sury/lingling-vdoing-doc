@@ -43,7 +43,7 @@ module.exports = {
                     {
                         text: '第二章：对于所有对象都通用的方法', items: [
                             {text: '10.覆盖equals时请遵守通用约定', link: '/pages/8d58b1/'},
-                            // {text: '2.当面临多个参数的构造器时考虑使用Builder模式', link: '/pages/296245/'},
+                            {text: '11.覆盖equals时总要覆盖hashCode', link: '/pages/e736d2/'},
                         ]
                     },
                     // { text: '第三章：类和接口', items:[
