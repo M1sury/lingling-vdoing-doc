@@ -27,6 +27,7 @@
     "yamljs": "^0.3.0"
   },
   "dependencies": {
+    "@vuepress-denaro/vuepress-plugin-one-click-copy": "^1.0.2-alpha.0",
     "vuepress-plugin-baidu-autopush": "^1.0.1",
     "vuepress-plugin-comment": "^0.7.3",
     "vuepress-plugin-vssue-global": "^0.0.3"
