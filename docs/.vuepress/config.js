@@ -45,6 +45,7 @@ module.exports = {
                             {text: '10.覆盖equals时请遵守通用约定', link: '/pages/8d58b1/'},
                             {text: '11.覆盖equals时总要覆盖hashCode', link: '/pages/e736d2/'},
                             {text: '12.始终要覆盖toString', link: '/pages/7814b8/'},
+                            {text: '13.谨慎地覆盖clone', link: '/pages/757e7f/'},
                         ]
                     },
                     // { text: '第三章：类和接口', items:[
