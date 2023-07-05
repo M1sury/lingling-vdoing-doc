@@ -46,6 +46,7 @@ module.exports = {
                             {text: '11.覆盖equals时总要覆盖hashCode', link: '/pages/e736d2/'},
                             {text: '12.始终要覆盖toString', link: '/pages/7814b8/'},
                             {text: '13.谨慎地覆盖clone', link: '/pages/757e7f/'},
+                            {text: '14.考虑实现Comparable接口', link: '/pages/3b3f13/'},
                         ]
                     },
                     // { text: '第三章：类和接口', items:[
