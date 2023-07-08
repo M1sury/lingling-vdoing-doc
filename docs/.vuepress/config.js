@@ -191,7 +191,7 @@ module.exports = {
         },
         footer: { // 页脚信息
             createYear: 2022, // 博客创建年份
-            copyrightInfo: 'Lingling | <a href="https://github.com/M1sury/lingling-vdoing-doc/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息，支持a标签
+            copyrightInfo: 'Lingling | <a href="https://beian.miit.gov.cn" target="_blank">晋ICP备2022002671号</a><br>', // 博客版权信息，支持a标签
         },
         // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
         extendFrontmatter: {
