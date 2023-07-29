@@ -100,10 +100,11 @@ module.exports = {
                 ]
             },
             {
-                 text: '微服务组件', items: [
-                                {text: 'Sentinel', link: '/pages/91c228/'},
-                            ]
-                        },
+                text: '微服务组件', items: [
+                    {text: 'Nacos', link: '/pages/e58b4f/'},
+                    {text: 'Sentinel', link: '/pages/91c228/'},
+                ]
+            },
             {
                 text: 'Go', link: '/pages/572a48/', items: [
                     {
@@ -123,14 +124,18 @@ module.exports = {
                             {text: '青龙-B站', link: '/pages/daaeaa/'},
                         ]
                     },
-                    {text:"云效自动化部署",items:[
+                    {
+                        text: "云效自动化部署", items: [
                             {text: 'Gitub或Gitee+云效实现自动化部署(上)', link: '/pages/8526a9/'},
                             {text: 'Gitub或Gitee+云效实现自动化部署(下)', link: '/pages/be6bbe/'},
-                    ]},
-                    {text:"Linux常用组件",items:[
-                        {text: 'Nginx', link: '/pages/602c04/'},
-                        {text: 'Gitlab', link: '/pages/ccb60c/'},
-                    ]},
+                        ]
+                    },
+                    {
+                        text: "Linux常用组件", items: [
+                            {text: 'Nginx', link: '/pages/602c04/'},
+                            {text: 'Gitlab', link: '/pages/ccb60c/'},
+                        ]
+                    },
                 ]
             },
             {text: '关于', link: '/pages/1b12ed/'},
@@ -217,13 +222,13 @@ module.exports = {
 
         //['fulltext-search'], // 全文搜索
         [
-            'container',{
+            'container', {
             type: 'tip',
-            defaultTitle:{
-                '/':'TIP',
-                '/zh/':'提示'
+            defaultTitle: {
+                '/': 'TIP',
+                '/zh/': '提示'
             }
-            }
+        }
         ],
         [
             'sitemap', {
