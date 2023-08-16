@@ -277,7 +277,7 @@ module.exports = {
                     repo: 'lingling-vdoing-doc', // GitHub 仓库
                     owner: 'M1sury', // GitHub仓库所有者
                     admin: ['M1sury'], // 对仓库有写权限的人
-                    proxy: '/github/login/oauth/access_token',//反向代理解决跨域问题
+                    proxy: 'https://fastgit.xx1021a286.workers.dev/?https://github.com/login/oauth/access_token',//反向代理解决跨域问题
                     // distractionFreeMode: true,
                     pagerDirection: 'last', // 'first'正序 | 'last'倒序
                     id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
