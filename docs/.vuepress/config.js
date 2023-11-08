@@ -9,7 +9,7 @@ module.exports = {
     locales: {
         "/": {
             lang: 'zh-CN',
-            title: "lingling's blog",
+            title: "工作站",
             description: '仅仅只是一个记录个人学习的博客',
         }
     },
